@@ -13,7 +13,7 @@ var Note = (function(){
         var scale = scale ? scale : DEFAULT_SCALE;
         var width = width ? width : calculateNoteCanvasWidth();
 
-        var renderer = new Vex.Flow.Renderer($('#note-canvas')[0], Vex.Flow.Renderer.Backends.RAPHAEL);
+        var renderer = new Vex.Flow.Renderer($('#note-canvas')[0], Vex.Flow.Renderer.Backends.CANVAS);
         var artist = new Artist(10, 10, width, {scale: scale});
         var vextab = new VexTab(artist);
         var player = new Vex.Flow.Player(artist);

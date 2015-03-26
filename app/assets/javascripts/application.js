@@ -11,6 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+
+// VexTab dependencies
+//= require paper
+//= require midi
+//= require base64binary
+//= require vextab-canvas
+//= require vextab-editor
+
 //= require underscore
 //= require nprogress
 //= require nprogress-turbolinks
@@ -23,8 +31,6 @@
 //= require maskmoney
 //= require twitter/typeahead
 //= require twitter/typeahead.min
-//= require vextab-canvas
-//= require vextab-editor
 //= require fb-sdk
 //= require userreport
 //= require turbolinks
