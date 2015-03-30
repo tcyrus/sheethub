@@ -1,5 +1,6 @@
 # Sheet Model
 class Sheet < ActiveRecord::Base
+  include ActionView::Helpers
   include Relatable
   include Taggable
   include Licensable
@@ -59,6 +60,16 @@ class Sheet < ActiveRecord::Base
 
   def self.sort_enum
     ['recent', 'likes']
+  end
+
+  def get_playables
+    assets.select(&:playable?).map do |asset|
+      {
+        url: asset.download_url,
+        filename: asset.filename,
+        filesize: number_to_human_size(asset.filesize)
+      }
+    end
   end
 
   def self.cached_best_sellers

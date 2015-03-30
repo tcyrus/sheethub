@@ -63,6 +63,7 @@ class SheetsController < ApplicationController
   def show
     track('View sheet', sheet_id: @sheet.id, sheet_title: @sheet.title)
     @likes = @sheet.votes_for.includes(:voter).limit(5)
+    @playables = @sheet.get_playables
   end
 
   def fans

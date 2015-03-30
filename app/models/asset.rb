@@ -17,6 +17,10 @@ class Asset < ActiveRecord::Base
   validate :validate_file_size
   # TODO: validate attachment content type: MIDI, .ptb, .gp5, .tg, etc...
 
+  def playable?
+    filetype == "audio/mp3"
+  end
+
   def s3_key
     url.sub(S3DirectUpload.config.url, '')
   end
