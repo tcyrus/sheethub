@@ -23,9 +23,8 @@
 //= require maskmoney
 //= require twitter/typeahead
 //= require twitter/typeahead.min
-//= require vextab-canvas
-//= require vextab-editor
 //= require fb-sdk
 //= require userreport
+//= require soundmanager2
 //= require turbolinks
 //= require_tree .
