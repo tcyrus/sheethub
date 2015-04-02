@@ -7,9 +7,11 @@ class Order < ActiveRecord::Base
   belongs_to :user, counter_cache: true
   belongs_to :sheet, counter_cache: true
   enum category: %w(checkout free_checkout download_key gift)
-  enum status: %w(processing completed failed)
+  enum status: %w(processing completed failed unclaimed)
   validates :sheet_id, uniqueness: { scope: :user_id,
                                    message: ORDER_UNIQUENESS_VALIDATION_MESSAGE }
+  validates_email_format_of :email, if: proc { |u| u.email? && u.email_changed? }, message: 'You have an invalid email address'
+
   has_attached_file :pdf,
                     hash_secret: Rails.application.secrets.sheet_hash_secret,
                     default_url: Sheet::PDF_DEFAULT_URL

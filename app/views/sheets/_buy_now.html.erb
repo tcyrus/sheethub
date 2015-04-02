@@ -3,14 +3,12 @@
     <div class="panel-body bg-feathers">
         <% if current_user && sheet.uploaded_by?(current_user) %>
             <%= render 'sheets/edit_sheet_button', sheet: sheet %>
-        <% elsif user_signed_in? %>
+        <% else %>
             <% if sheet.free? && !sheet.pay_what_you_want %>
               <a href="<%= orders_get_url(sheet: sheet) %>" data-method="post"><button type="button" class="btn btn-success btn-lg btn-block col-xs-8"> I Want This!</button></a>
             <% else %>
               <a id="buy-now"><button type="button" class="btn btn-success btn-lg btn-block col-xs-8"> I Want This!</button></a>
             <% end %>
-        <% else %>
-            <a href="<%= new_user_session_url %>"><button type="button" class="btn btn-success btn-lg btn-block col-xs-8"> I Want This!</button></a>
         <% end %>
     </div>
 </div>
@@ -30,6 +28,13 @@
           <em class="fa fa-unlock"></em> Download <%= sheet.title %> by purchasing it for <strong><%= number_to_currency(sheet.price) %></strong> USD<%= " or more" if sheet.pay_what_you_want %>.
         <% end %>
         </p>
+
+        <% unless user_signed_in? %>
+            <div class="input-group input-group-bordered">
+              <span class="input-group-addon"><em class="fa fa-envelope-o"></em></span>
+                <%= text_field_tag(:email) %>
+            </div>
+        <% end %>
 
         <% if sheet.free? || sheet.pay_what_you_want %>
           <div class="input-group input-group-bordered">

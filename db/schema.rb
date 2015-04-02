@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331101732) do
+ActiveRecord::Schema.define(version: 20150402125633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(version: 20150331101732) do
     t.string   "billing_zipcode"
     t.inet     "ip"
     t.integer  "category",                           default: 0, null: false
+    t.string   "email",                  limit: 255
   end
 
   add_index "orders", ["sheet_id"], name: "index_orders_on_sheet_id", using: :btree
