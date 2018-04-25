@@ -20,20 +20,14 @@ You'll need the following installed on your machine:
 - libjpeg
 - imagemagick
 
-For each of the above, do:
-
-```
-brew install <requirement>
-```
-
 You also need the following running:
 
 - elasticsearch
 - postgres
 
-Additionally, you need to populate `development` environment [secrets.yml](https://github.com/Leventhan/sheethub/blob/master/config/secrets.yml) attributes before you can run the project on development. This means you'll have to register a number of external services, such as AWS S3 and PayPal Sandbox when running locally as well as `redis` and `memcached` when running on a staging server.
+Additionally, you need to populate `development` environment [secrets.yml](config/secrets.yml) attributes before you can run the project on development. This means you'll have to register a number of external services, such as AWS S3 and PayPal Sandbox when running locally as well as `redis` and `memcached` when running on a staging server.
 
-For Facebook and Google Authentication to work, you'll need to create apps/setup oauth for both services.
+For Facebook and Google Authentication to work, you'll need to create apps/setup Oauth for both services.
 
 `asset_hash_secret`, `sheet_hash_secret` can be any long hash string, the longer and harder to quess, the more secure. For `secret_key_base`, use the following command to generate a secret to use:
 
@@ -61,7 +55,7 @@ rails s
 
 SheetHub is built on **Rails 4.2** and uses **Ruby 2.2.0**.
 
-The latest entity-relationship diagram for all the model objects can be viewed [here](https://github.com/Leventhan/sheethub/blob/master/erd.pdf). You can update the erd.pdf file based on the current schema using the following command:
+The latest entity-relationship diagram for all the model objects can be viewed [here](erd.pdf). You can update the erd.pdf file based on the current schema using the following command:
 
 ```
 bundle exec erd
@@ -135,7 +129,7 @@ Here are some ideas you can work on:
 - Fix typos
 - *Your idea here!*
 
-Initiate idea discussions by creating a Github issue!
+Initiate idea discussions by creating a GitHub issue!
 
-We use [Github Flow](https://guides.github.com/introduction/flow/), a lightweight, branch-based workflow. Create feature branches and your pull requests will be reviewed!
+We use [GitHub Flow](https://guides.github.com/introduction/flow/), a lightweight, branch-based workflow. Create feature branches and your pull requests will be reviewed!
 

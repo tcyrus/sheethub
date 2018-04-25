@@ -1,3 +1,3 @@
-$(document).on("page:change", function() {
-    $(".alert").addClass("in");
+$(document).on('page:change', function() {
+    $('.alert').addClass('in');
 });

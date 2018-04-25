@@ -30,7 +30,7 @@
         margin-top: 20px;
 
         p, h1 {
-            margin: 0px;
+            margin: 0;
         }
 
         p {
@@ -50,10 +50,10 @@
             font-weight: 600;
             color: rgba(255, 255, 255, 1);
             display: inline;
-        }
 
-        h1 a {
-            color: rgba(255, 255, 255, 1);
+            a {
+                color: rgba(255, 255, 255, 1);
+            }
         }
     }
 }
@@ -72,7 +72,7 @@
     }
 
     .list-inline {
-        margin-bottom: 0px;
+        margin-bottom: 0;
 
         p {
             color: #555;
@@ -82,27 +82,27 @@
 
 .nav-strip-profile {
     background: #fff;
-    padding: 0px 20px;
+    padding: 0 20px;
     padding-top: 5px;
     height: 50px;
 
     .container-fluid {
-        padding:0px 40px;
+        padding: 0 40px;
     }
 
     .fade-text {
-        padding: 0px 5px;
+        padding: 0 5px;
     }
 }
 
 .nav-strip-profile .list-inline {
-    margin-left: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .nav-strip-profile .list-inline > li {
-    margin: 0px 10px;
+    margin: 0 10px;
     padding-bottom: 8px;
     font-style: normal;
 
@@ -130,7 +130,6 @@
         width: 30%;
         margin: 1.66666666665%;
     }
-
 }
 
 .wysihtml5-sandbox {

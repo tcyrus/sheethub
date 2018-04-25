@@ -1,28 +1,27 @@
 #alerts {
-    background:none;
+    background: none;
 
     .alert {
         border-top: 2px solid #2583EB;
-        margin: 0px auto;
-        border-radius: 0px;
+        margin: 0 auto;
+        border-radius: 0;
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
         padding: 10px;
         text-align: center;
         font-size: 16px;
         width: 50%;
-        -moz-box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);
-        -ms-box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);
-        -o-box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);
-        box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);
-
+        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+        -ms-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+        -o-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 
         .fa, .close {
             font-size: 24px;
         }
 
         .close {
-            padding: 0px 15px;
+            padding: 0 15px;
             background: #ccc;
             border-radius: 100px;
             outline: none;
@@ -40,10 +39,7 @@
     .alert-success {
         background: #fff;
     }
-
-
 }
-
 
 form {
     .alert {
@@ -52,7 +48,6 @@ form {
     }
 }
 
-
 .alert.alert-info.alert-tag-info {
-    margin: 10px 0px;
+    margin: 10px 0;
 }

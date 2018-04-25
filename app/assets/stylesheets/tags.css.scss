@@ -4,7 +4,7 @@
     margin: 2px 0px;
     opacity: 0.85;
     padding: 4px 12px;
-    color: #ffffff;
+    color: #fff;
     border: 1px solid #0073bb;
     text-shadow: 0 1px 0 rgba(0, 51, 83, 0.9);
     border-radius: 100px;
@@ -27,8 +27,8 @@
     border: 1px solid #ECEDEF;
     text-shadow: none;
     box-shadow: none;
-    background:#fff;
-    background-image:none;
+    background: #fff;
+    background-image: none;
     opacity: 1;
 
     &.active, &:hover, &:focus {
@@ -39,9 +39,8 @@
         background-image: -webkit-gradient(linear, left top, left bottom, from(#1da7ee), to(#178ee9));
         background-image: linear-gradient(to bottom, #1da7ee, #178ee9);
         background-repeat: repeat-x;
-        color: #fff
+        color: #fff;
     }
-
 }
 
 .tag-count {
@@ -66,17 +65,15 @@
         margin-top: 10px;
 
         p {
-            margin-bottom: 0px;
+            margin-bottom: 0;
             padding-left: 10px;
         }
 
         h3 {
             padding-left: 10px;
-            margin-top: 0px;
+            margin-top: 0;
         }
-
     }
-
 }
 
 .bordered-top {

@@ -37,22 +37,22 @@
 
     .feature {
         height: 160px;
-    }
 
-    .feature .col-xs-1 {
-        padding: 0px;
-    }
+        .col-xs-1 {
+            padding: 0;
+        }
 
-    .feature .col-xs-11 {
-        padding-left: 0px;
+        .col-xs-11 {
+            padding-left: 0;
+        }
     }
 
     img {
         width: 80%;
         margin: 40px 10%;
-        -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
-        -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
-        box-shadow: 0 0 3px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
         border-radius: 4px;
     }
 }

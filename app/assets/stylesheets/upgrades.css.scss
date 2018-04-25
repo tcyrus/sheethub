@@ -6,15 +6,13 @@
     h2 {
         color: #888;
         font-family: 'Source Sans Pro', sans-serif;
-        margin-top:0px;
+        margin-top: 0;
     }
-
 
     .col-xs-4 {
-        padding: 0px;
-        padding-top:10px;
+        padding: 0;
+        padding-top: 10px;
     }
-
 
     .list-group {
         margin: 20px;
@@ -43,16 +41,23 @@
             font-weight: 300;
         }
     }
-
 }
 
-    .tooltip {
-        min-width: 150px;
-    }
+.tooltip {
+    min-width: 150px;
+}
 
-    .list-group .well {
-        border-radius: 0px;
-        margin: 0px;
+.pricing-box {
+    h1 {
+        color: white;
+        font-weight: 300;
+    }
+}
+
+.list-group {
+    .well {
+        border-radius: 0;
+        margin: 0;
         border: 1px solid #ddd;
         border-top: none;
         border-bottom: none;
@@ -64,17 +69,8 @@
         }
     }
 
-
-.pricing-box {
-    h1 {
-        color: white;
-        font-weight: 300;
-    }
-}
-
-.list-group {
-    h1.membership-price{
-        text-align:center;
+    h1.membership-price {
+        text-align: center;
         font-weight: 300;
         margin-top: 10px;
 
@@ -83,45 +79,43 @@
             bottom: 10px;
             position: relative;
         }
-
     }
-}
 
-.list-group.plus-plan {
-    .list-group-item {
-        &:hover, &:focus {
-            cursor: help;
-            background: #ecf7fe;
-        }
+    &.plus-plan {
+        .list-group-item {
+            &:hover, &:focus {
+                cursor: help;
+                background: #ecf7fe;
+            }
 
-        .membership-price {
-            color: #2583EB;
-        }
+            .membership-price {
+                color: #2583EB;
+            }
 
-        &:first-child {
-            background: #2583EB;
-            color: white;
+            &:first-child {
+                background: #2583EB;
+                color: white;
+            }
         }
     }
-}
 
-.list-group.pro-plan {
-    outline: 10px solid #ecface;
+    &.pro-plan {
+        outline: 10px solid #ecface;
 
-    .list-group-item {
-        &:hover, &:focus {
-            cursor: help;
-            background: #ecface;
+        .list-group-item {
+            &:hover, &:focus {
+                cursor: help;
+                background: #ecface;
+            }
+
+            &:first-child {
+                background: #5cb85c;
+                color: white;
+            }
+
+            .membership-price {
+                color: #5cb85c;
+            }
         }
-
-        &:first-child {
-            background: #5cb85c;
-            color: white;
-        }
-
-        .membership-price {
-            color: #5cb85c;
-        }
-
     }
 }

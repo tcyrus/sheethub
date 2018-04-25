@@ -12,8 +12,8 @@ h2 {
 }
 
 .btn {
-    box-shadow: rgba(0, 0, 0, 0.219608) 0px 1px 3px 0px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.219608) 0px 1px 3px 0px;
+    box-shadow: rgba(0, 0, 0, 0.219608) 0 1px 3px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.219608) 0 1px 3px 0;
 
     &:hover, &:focus {
         box-shadow: none;
@@ -85,26 +85,25 @@ h2 {
     border: 1px solid #ECEDEF;
 }
 
-q,
-blockquote {
+q, blockquote {
     quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 .nopadding {
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .zeropadding {
-    padding: 0px;
+    padding: 0;
 }
 
 .zeromargin {
-    margin: 0px;
+    margin: 0;
 }
 
 .zeropaddingleft {
-    padding-left:0;
+    padding-left: 0;
 }
 
 .zerohorizontalpadding {
@@ -158,8 +157,8 @@ a.disabled {
 
 .input-group {
     .input-group-addon {
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
     }
 }
 
@@ -179,7 +178,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 h2 .fa-eye-slash {
-    padding: 75px 0px;
+    padding: 75px 0;
 }
 
 .panel-heading {
@@ -195,15 +194,15 @@ h2 .fa-eye-slash {
 }
 
 .carousel-indicators {
-    bottom: 0px;
-}
+    bottom: 0;
 
-.carousel-indicators .active {
-    background-color: #5cb85c;
-}
+    .active {
+        background-color: #5cb85c;
+    }
 
-.carousel-indicators li {
-    border-color: #5cb85c;
+    li {
+        border-color: #5cb85c;
+    }
 }
 
 .carousel-inner > .item > img {
@@ -219,7 +218,7 @@ h2 .fa-eye-slash {
 }
 
 .inline-block {
-    display:inline-block;
+    display: inline-block;
 }
 
 .panel-primary {
@@ -232,5 +231,5 @@ h2 .fa-eye-slash {
 }
 
 .input-group .input-group-addon {
-  min-width: 40px;
+    min-width: 40px;
 }

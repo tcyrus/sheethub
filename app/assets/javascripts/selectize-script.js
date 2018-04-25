@@ -1,4 +1,4 @@
-$(document).on("page:change", function() {
+$(document).on('page:change', function() {
     $('#instruments-field').selectize({
         plugins: ['remove_button'],
         delimiter: ',',
@@ -42,34 +42,33 @@ $(document).on("page:change", function() {
     $('#user_billing_country').selectize({});
 
     $('#sheet_visibility').selectize({
-         options: [{
-             "label":'Public',
-             "value":'vpublic'
-         }, {
-             "label":'Private (Only Me)',
-             "value":'vprivate'
-         }],
-         valueField: 'value',
-         labelField: 'label'
+        options: [{
+            'label': 'Public',
+            'value': 'vpublic'
+        }, {
+            'label': 'Private (Only Me)',
+            'value': 'vprivate'
+        }],
+        valueField: 'value',
+        labelField: 'label'
      });
 
     $('#sheet_license').selectize({
         options: [{
-            "label":'All rights reserved. This title is my original work.',
-            "value":'all_rights_reserved'
+            'label': 'All rights reserved. This title is my original work.',
+            'value': 'all_rights_reserved'
         }, {
-            "label":'I have the permission to make, sell, and distribute this arrangement.',
-            "value":'licensed_arrangement'
+            'label': 'I have the permission to make, sell, and distribute this arrangement.',
+            'value': 'licensed_arrangement'
         }, {
-            "label":'Creative Commons (Attribution-NonCommercial-ShareAlike)',
-            "value":'creative_commons'
+            'label': 'Creative Commons (Attribution-NonCommercial-ShareAlike)',
+            'value': 'creative_commons'
         }, {
-            "label":'Creative Commons Zero. ',
-            "value":'cc0'
-        },
-        {
-            "label":'This is a public domain work.',
-            "value":'public_domain'
+            'label': 'Creative Commons Zero. ',
+            'value': 'cc0'
+        }, {
+            'label': 'This is a public domain work.',
+            'value': 'public_domain'
         }],
         valueField: 'value',
         labelField: 'label'

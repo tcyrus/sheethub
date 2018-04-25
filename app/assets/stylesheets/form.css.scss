@@ -19,7 +19,6 @@ input[type="email"], input[type="number"], input[type="text"], textarea {
     margin-bottom: 10px;
 }
 
-
 .radio-btn-toolbar {
     margin-left: 20px;
 
@@ -27,7 +26,6 @@ input[type="email"], input[type="number"], input[type="text"], textarea {
         display: inline-block;
         width: 50%;
     }
-
 }
 
 .input-group {
@@ -36,8 +34,8 @@ input[type="email"], input[type="number"], input[type="text"], textarea {
     }
 
     #amount, #sheet_price {
-        border-bottom-left-radius: 0px;
-        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
     }
 }
 
@@ -65,7 +63,7 @@ form.sleek-form {
 }
 
 div.checkbox.limit-purchases {
-    padding-bottom: 0px;
+    padding-bottom: 0;
 
     label {
         width: 100%;
@@ -85,6 +83,6 @@ div.checkbox.limit-purchases {
 }
 
 input.form-control.text-selectable {
-    cursor:text;
-    background:#fff;
+    cursor: text;
+    background: #fff;
 }
