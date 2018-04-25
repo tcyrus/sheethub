@@ -16,7 +16,7 @@
     <tbody>
         <% sales.each do |order| %>
           <tr>
-            <td><%= order.purchased_at.strftime("%A, %e %B %Y %l:%M %p") %></td>
+            <td><%= order.purchased_at.strftime('%A, %e %B %Y %l:%M %p') %></td>
             <td><%= link_to order.sheet.title, sheet_url(order.sheet) %></td>
             <td><%= link_to order.user.display_name, user_profile_url(subdomain: order.user.username) %></td>
             <td><%= order.user.email %></td>

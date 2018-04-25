@@ -1,5 +1,6 @@
-<% title "Sign In"
-   description "Sign In to SheetHub, the easiest publishing platform built for musicians."
+<%
+title 'Sign In'
+description 'Sign In to SheetHub, the easiest publishing platform built for musicians.'
 %>
 
 <div class="container">
@@ -8,8 +9,8 @@
 
     <div class="col-lg-4 col-lg-offset-4">
         <div class="white-container">
-        <%= render "devise/shared/omniauth_links" %>
-        <%= render "layouts/line_divider" %>
+        <%= render 'devise/shared/omniauth_links' %>
+        <%= render 'layouts/line_divider' %>
 
         <%= simple_form_for(resource, as: resource_name, url: session_url(resource_name), defaults: { input_html: { class: 'form-control' }}) do |f| %>
         <div class="form-inputs">
@@ -21,16 +22,16 @@
               <span class="input-group-addon"><em class="fa fa-key"></em></span>
                 <%= f.input_field :password, placeholder: 'Password', required: false %>
             </div>
-            <%= link_to "Forgot your password?", new_password_url(resource_name), class:'pull-right' %><br />
+            <%= link_to 'Forgot your password?', new_password_url(resource_name), class: 'pull-right' %><br />
         </div>
 
         <div class="form-actions">
-            <%= f.button :submit, "Sign In", class:"btn btn-success btn-wide btn-lg btn-block" %>
+            <%= f.button :submit, 'Sign In', class: 'btn btn-success btn-wide btn-lg btn-block' %>
         </div>
         <% end %>
 
         </div>
-        <%= render "devise/shared/links" %>
+        <%= render 'devise/shared/links' %>
     </div>
 </div>
 </div>

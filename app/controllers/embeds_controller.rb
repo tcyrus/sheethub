@@ -1,5 +1,5 @@
 class EmbedsController < ApplicationController
-  layout "embed"
+  layout 'embed'
 
   def sheet
     @sheet = Sheet.friendly.find(params[:id])

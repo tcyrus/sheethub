@@ -14,25 +14,25 @@ module Taggable
 
   class_methods do
     def tags
-      Rails.cache.fetch("all_tags", expires_in: 1.day) do
+      Rails.cache.fetch('all_tags', expires_in: 1.day) do
         Sheet.all_tags
       end
     end
 
     def popular_genres
-      Rails.cache.fetch("popular_genres", expires_in: 1.day) do
+      Rails.cache.fetch('popular_genres', expires_in: 1.day) do
         Sheet.tag_counts_on(:genres).order(taggings_count: :desc).limit(DEFAULT_NUM_POPULAR_TAGS)
       end
     end
 
     def popular_composers
-      Rails.cache.fetch("popular_composers", expires_in: 1.day) do
+      Rails.cache.fetch('popular_composers', expires_in: 1.day) do
         Sheet.tag_counts_on(:composers).order(taggings_count: :desc).limit(DEFAULT_NUM_POPULAR_TAGS)
       end
     end
 
     def popular_sources
-      Rails.cache.fetch("popular_sources", expires_in: 1.day) do
+      Rails.cache.fetch('popular_sources', expires_in: 1.day) do
         Sheet.tag_counts_on(:sources).order(taggings_count: :desc).limit(DEFAULT_NUM_POPULAR_TAGS)
       end
     end
@@ -58,7 +58,7 @@ module Taggable
     composer_tag_list = composers.pluck(:name)
     source_tag_list = sources.pluck(:name)
     genre_tag_list = genres.pluck(:name)
-    publisher_string = publishers.to_a.map(&:name).map(&:titleize).join(", ")
+    publisher_string = publishers.to_a.map(&:name).map(&:titleize).join(', ')
     self.update_columns(cached_composers: composer_tag_list,
                 cached_sources: source_tag_list,
                 cached_genres: genre_tag_list,

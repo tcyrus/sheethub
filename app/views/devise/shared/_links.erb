@@ -1,18 +1,18 @@
 <br />
 <div class="text-center">
 <%- if controller_name != 'registrations' %>
-    <p>Not a member? <%= link_to "Sign up here.", new_registration_url(resource_name) %></p>
+    <p>Not a member? <%= link_to 'Sign up here.', new_registration_url(resource_name) %></p>
 <% end %>
 
 <%- if controller_name != 'sessions' %>
-    <p>Already a member? <%= link_to "Sign in here.", new_session_url(resource_name) %></p>
+    <p>Already a member? <%= link_to 'Sign in here.', new_session_url(resource_name) %></p>
 <% end %>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-  <%= link_to "Resend confirmation instructions", new_confirmation_path(resource_name) %><br />
+  <%= link_to 'Resend confirmation instructions', new_confirmation_path(resource_name) %><br />
 <% end -%>
 
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
-  <%= link_to "Resend unlock instructions?", new_unlock_url(resource_name) %>
+  <%= link_to 'Resend unlock instructions?', new_unlock_url(resource_name) %>
 <% end -%>
 </div>

@@ -1,14 +1,14 @@
 <%
-title "All Genres"
-description "All genres on SheetHub"
+title 'All Genres'
+description 'All genres on SheetHub'
 %>
 
 <div class="container">
     <div class="row">
     <div class="col-xs-12">
-        <%= render 'tag_type_breadcrumb', tag_type:"genre" %>
+        <%= render 'tag_type_breadcrumb', tag_type: 'genre' %>
         <div class="flat-tags">
-        <%= render 'lean_tags', tags: @genres, tag_type:"genre" %>
+        <%= render 'lean_tags', tags: @genres, tag_type: 'genre' %>
         </div>
     </div>
     </div>

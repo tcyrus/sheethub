@@ -3,7 +3,7 @@
         <%= render 'sheets/sheet_text', sheet: sheet %>
         <div class="sheet-preview">
         <a href="<%= sheet_url(sheet) %>">
-            <%= image_tag(sheet.pdf_preview_url, title:"Preview of #{sheet.title}") %>
+            <%= image_tag(sheet.pdf_preview_url, title: "Preview of #{sheet.title}") %>
         </a>
         </div>
     <% end %>

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "sheets/index", :type => :view do
+RSpec.describe 'sheets/index', :type => :view do
   before(:each) do
     assign(:sheets, [
       Sheet.create!(),
@@ -8,7 +8,7 @@ RSpec.describe "sheets/index", :type => :view do
     ])
   end
 
-  it "renders a list of sheets" do
+  it 'renders a list of sheets' do
     render
   end
 end

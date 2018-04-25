@@ -10,12 +10,12 @@
 
     <div id="assets_container"></div>
 
-    <%= s3_uploader_form id: "s3-uploader",
+    <%= s3_uploader_form id: 's3-uploader',
       data: {:sheet_id => sheet.id},
       key: "files/{unique_id}-#{SecureRandom.hex}/${filename}",
-      key_starts_with: "files/",
+      key_starts_with: 'files/',
       callback_url: assets_url,
-      acl: "private",
+      acl: 'private',
       # expiration: 24.hours.from_now.utc.iso8601,
       max_file_size: Asset::MAX_FILESIZE.megabytes do %>
       <%= file_field_tag :file, multiple: true %>

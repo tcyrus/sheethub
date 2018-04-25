@@ -1,7 +1,7 @@
 class SubscriptionMailer < ActionMailer::Base
   layout 'mailer'
 
-  DEFAULT_FROM_EMAIL = "SheetHub <notifications@sheethub.co>"
+  DEFAULT_FROM_EMAIL = 'SheetHub <notifications@sheethub.co>'
   default from: DEFAULT_FROM_EMAIL
 
   def purchase_success_email(subscription)

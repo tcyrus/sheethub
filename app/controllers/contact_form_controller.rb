@@ -7,7 +7,7 @@ class ContactFormController < ApplicationController
   end
 
   def create
-    params[:contact_form][:to] = "yosriady@gmail.com"
+    params[:contact_form][:to] = 'yosriady@gmail.com'
     @contact = ContactForm.new(params[:contact_form])
     if @contact.deliver
       flash[:notice] = 'Thank you for your message. We will contact you soon!'

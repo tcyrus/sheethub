@@ -24,11 +24,11 @@ RSpec.describe SheetsController, :type => :controller do
   # Sheet. As you add validations to Sheet, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    skip('Add a hash of attributes valid for your model')
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    skip('Add a hash of attributes invalid for your model')
   }
 
   # This should return the minimal set of values that should be in the session
@@ -36,7 +36,7 @@ RSpec.describe SheetsController, :type => :controller do
   # SheetsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET index" do
+  describe 'GET index' do
     it "assigns all sheets as @sheets" do
       sheet = Sheet.create! valid_attributes
       get :index, {}, valid_session
@@ -44,7 +44,7 @@ RSpec.describe SheetsController, :type => :controller do
     end
   end
 
-  describe "GET show" do
+  describe 'GET show' do
     it "assigns the requested sheet as @sheet" do
       sheet = Sheet.create! valid_attributes
       get :show, {:id => sheet.to_param}, valid_session
@@ -52,14 +52,14 @@ RSpec.describe SheetsController, :type => :controller do
     end
   end
 
-  describe "GET new" do
+  describe 'GET new' do
     it "assigns a new sheet as @sheet" do
       get :new, {}, valid_session
       expect(assigns(:sheet)).to be_a_new(Sheet)
     end
   end
 
-  describe "GET edit" do
+  describe 'GET edit' do
     it "assigns the requested sheet as @sheet" do
       sheet = Sheet.create! valid_attributes
       get :edit, {:id => sheet.to_param}, valid_session
@@ -67,9 +67,9 @@ RSpec.describe SheetsController, :type => :controller do
     end
   end
 
-  describe "POST create" do
-    describe "with valid params" do
-      it "creates a new Sheet" do
+  describe 'POST create' do
+    describe 'with valid params' do
+      it 'creates a new Sheet' do
         expect {
           post :create, {:sheet => valid_attributes}, valid_session
         }.to change(Sheet, :count).by(1)
@@ -81,13 +81,13 @@ RSpec.describe SheetsController, :type => :controller do
         expect(assigns(:sheet)).to be_persisted
       end
 
-      it "redirects to the created sheet" do
+      it 'redirects to the created sheet' do
         post :create, {:sheet => valid_attributes}, valid_session
         expect(response).to redirect_to(Sheet.last)
       end
     end
 
-    describe "with invalid params" do
+    describe 'with invalid params' do
       it "assigns a newly created but unsaved sheet as @sheet" do
         post :create, {:sheet => invalid_attributes}, valid_session
         expect(assigns(:sheet)).to be_a_new(Sheet)
@@ -95,22 +95,22 @@ RSpec.describe SheetsController, :type => :controller do
 
       it "re-renders the 'new' template" do
         post :create, {:sheet => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
+        expect(response).to render_template('new')
       end
     end
   end
 
-  describe "PUT update" do
-    describe "with valid params" do
+  describe 'PUT update' do
+    describe 'with valid params' do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        skip('Add a hash of attributes valid for your model')
       }
 
-      it "updates the requested sheet" do
+      it 'updates the requested sheet' do
         sheet = Sheet.create! valid_attributes
         put :update, {:id => sheet.to_param, :sheet => new_attributes}, valid_session
         sheet.reload
-        skip("Add assertions for updated state")
+        skip('Add assertions for updated state')
       end
 
       it "assigns the requested sheet as @sheet" do
@@ -119,14 +119,14 @@ RSpec.describe SheetsController, :type => :controller do
         expect(assigns(:sheet)).to eq(sheet)
       end
 
-      it "redirects to the sheet" do
+      it 'redirects to the sheet' do
         sheet = Sheet.create! valid_attributes
         put :update, {:id => sheet.to_param, :sheet => valid_attributes}, valid_session
         expect(response).to redirect_to(sheet)
       end
     end
 
-    describe "with invalid params" do
+    describe 'with invalid params' do
       it "assigns the sheet as @sheet" do
         sheet = Sheet.create! valid_attributes
         put :update, {:id => sheet.to_param, :sheet => invalid_attributes}, valid_session
@@ -136,20 +136,20 @@ RSpec.describe SheetsController, :type => :controller do
       it "re-renders the 'edit' template" do
         sheet = Sheet.create! valid_attributes
         put :update, {:id => sheet.to_param, :sheet => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
+        expect(response).to render_template('edit')
       end
     end
   end
 
-  describe "DELETE destroy" do
-    it "destroys the requested sheet" do
+  describe 'DELETE destroy' do
+    it 'destroys the requested sheet' do
       sheet = Sheet.create! valid_attributes
       expect {
         delete :destroy, {:id => sheet.to_param}, valid_session
       }.to change(Sheet, :count).by(-1)
     end
 
-    it "redirects to the sheets list" do
+    it 'redirects to the sheets list' do
       sheet = Sheet.create! valid_attributes
       delete :destroy, {:id => sheet.to_param}, valid_session
       expect(response).to redirect_to(sheets_url)

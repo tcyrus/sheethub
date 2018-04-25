@@ -10,7 +10,7 @@ module Paperclip
     end
 
     def make
-      dst = Tempfile.new([@basename, 'png'].compact.join("."))
+      dst = Tempfile.new([@basename, 'png'].compact.join('.'))
       dst.binmode
       image = MiniMagick::Image.open(File.expand_path(@file.path))
       image.format('png')

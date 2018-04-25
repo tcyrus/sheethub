@@ -6,10 +6,10 @@ FactoryGirl.define do
     is_flagged? false
     is_free? false
     is_original? false
-    price "9.99"
-    title "MyString"
+    price '9.99'
+    title 'MyString'
     pages 1
     uploader ""
-    description "MyText"
+    description 'MyText'
   end
 end

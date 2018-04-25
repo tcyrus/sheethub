@@ -32,5 +32,4 @@ module Upgradable
   def premium?
     plus? || pro?
   end
-
 end

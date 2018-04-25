@@ -1,7 +1,6 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-
-    if(typeof DISQUS === "undefined"){
+    if (typeof DISQUS === 'undefined') {
         var disqus_shortname = 'sheethub'; // required: replace example with your forum shortname
             /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
@@ -12,12 +11,11 @@
     } else {
         DISQUS.reset({
           reload: true,
-          config: function () {
+          config: function() {
             this.page.identifier = document.title;
             this.page.url = location.href;
           }
         });
     }
-
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

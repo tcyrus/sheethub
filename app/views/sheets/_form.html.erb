@@ -9,19 +9,19 @@
 
   <%= f.label :instruments %>
   <br>
-  <%= f.input_field :instruments_list, collection: Sheet.values_for_instruments, prompt: "Choose instruments", multiple: true , id: "instruments-field"%>
+  <%= f.input_field :instruments_list, collection: Sheet.values_for_instruments, prompt: 'Choose instruments', multiple: true, id: 'instruments-field' %>
 
   <%= f.label :composers %>
   <br>
-  <%= f.input_field :composer_list, collection: composers.collect{|tag| tag.name}, prompt: "Add composers", multiple: true , id: "composers-field"%>
+  <%= f.input_field :composer_list, collection: composers.collect{|tag| tag.name}, prompt: 'Add composers', multiple: true, id: 'composers-field' %>
 
   <%= f.label :genres %>
   <br>
-  <%= f.input_field :genre_list, collection: genres.collect{|tag| tag.name}, prompt: "Add genres", multiple: true , id: "genres-field"%>
+  <%= f.input_field :genre_list, collection: genres.collect{|tag| tag.name}, prompt: 'Add genres', multiple: true, id: 'genres-field' %>
 
   <%= f.label :sources %>
   <br>
-  <%= f.input_field :source_list, collection: sources.collect{|tag| tag.name}, prompt: "Where is this from?", multiple: true , id: "sources-field"%>
+  <%= f.input_field :source_list, collection: sources.collect{|tag| tag.name}, prompt: 'Where is this from?', multiple: true, id: 'sources-field' %>
 
   <%= f.label :visibility %>
   <%= f.input_field :visibility, :as => :select, :collection => Sheet.visibilities.keys, prompt: 'Is your work public?' %>
@@ -30,7 +30,7 @@
   <%= f.input_field :license, :as => :select, :collection => Sheet.licenses.keys, prompt: 'Pick a license' %>
   <%= f.label "Publisher / Copyright Information" %>
   <br>
-  <%= f.input_field :publisher_list, collection: Sheet.tags_on(:publishers).collect{|tag| tag.name}, prompt: "e.g. Sony Music Entertainment", multiple: true , id: "publishers-field"%>
+  <%= f.input_field :publisher_list, collection: Sheet.tags_on(:publishers).collect{|tag| tag.name}, prompt: 'e.g. Sony Music Entertainment', multiple: true, id: 'publishers-field' %>
 
 
   <hr>
@@ -59,12 +59,12 @@
   <%= f.label "Price" %>
   <div class="input-group input-group-bordered">
     <span class="input-group-addon">$</span>
-    <%= f.input_field :price, placeholder: "e.g. 2.99", :value => number_to_currency(f.object.price, unit: "", precision: 2) %>
+    <%= f.input_field :price, placeholder: 'e.g. 2.99', :value => number_to_currency(f.object.price, unit: "", precision: 2) %>
   </div>
 
   <div class="checkbox">
      <label>
-       <%= f.input_field :pay_what_you_want, inline_label: "Enable Pay-What-You-Want pricing" %>
+       <%= f.input_field :pay_what_you_want, inline_label: 'Enable Pay-What-You-Want pricing' %>
      </label>
      <a href="<%= support_url %>#help-pay-what-you-want" class="pull-right" target="_blank"><em class="fa fa-question-circle"></em></a>
   </div>
@@ -72,11 +72,11 @@
   <div class="checkbox limit-purchases">
     <label>
      <%= f.input_field :limit_purchases, inline_label: 'Limit number of purchases', class: 'inline-block' %>
-     <%= f.input_field :limit_purchase_quantity, class:'pull-right inline-block', min:'0' %>
+     <%= f.input_field :limit_purchase_quantity, class: 'pull-right inline-block', min: '0' %>
    </label>
   </div>
 
-  <%= f.button :submit, f.object.new_record? ? 'Upload' : 'Update', class: "btn btn-success btn-lg btn-block"%>
+  <%= f.button :submit, f.object.new_record? ? 'Upload' : 'Update', class: 'btn btn-success btn-lg btn-block' %>
 <% end %>
 
 <script>

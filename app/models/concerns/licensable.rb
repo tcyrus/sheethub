@@ -13,5 +13,4 @@ module Licensable
     return 'Public Domain' if public_domain?
     return 'Licensed' if licensed_arrangement?
   end
-
 end

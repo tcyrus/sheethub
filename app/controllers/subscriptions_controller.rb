@@ -16,7 +16,7 @@ class SubscriptionsController < ApplicationController
   def checkout
     payment_response = build_payment_response(subscriptions_params[:membership])
     unless payment_response.ack == 'Success'
-      Rails.logger.info "Paypal Subscription Error #{payment_response.error.first.errorId}: #{payment_response.error.first.message}"
+      Rails.logger.info "PayPal Subscription Error #{payment_response.error.first.errorId}: #{payment_response.error.first.message}"
       redirect_to upgrade_url, notice: ERROR_UPGRADE_PURCHASE_MESSAGE
     end
 
@@ -27,7 +27,7 @@ class SubscriptionsController < ApplicationController
                       status: Subscription.statuses[:processing]
                     )
     @subscription.update(tracking_id: payment_response.token)
-    track('Redirected to Paypal for subscription purchase',
+    track('Redirected to PayPal for subscription purchase',
           membership_type: subscriptions_params[:membership],
           tracking_id: @subscription.tracking_id)
     redirect_to payment_response.redirect_uri

@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.action_mailer.default_url_options = { host: 'www.sheethub.co'}
+  config.action_mailer.default_url_options = { host: 'www.sheethub.co' }
   config.action_mailer.smtp_settings = {
     address: 'smtp.mandrillapp.com',
     port: 25,
@@ -66,8 +66,8 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
   config.cache_store = :dalli_store,
                     (ENV["MEMCACHIER_SERVERS"] || "").split(","),
-                    {:username => ENV["MEMCACHIER_USERNAME"],
-                     :password => ENV["MEMCACHIER_PASSWORD"],
+                    {:username => ENV['MEMCACHIER_USERNAME'],
+                     :password => ENV['MEMCACHIER_PASSWORD'],
                      :failover => true,
                      :socket_timeout => 1.5,
                      :socket_failure_delay => 0.2

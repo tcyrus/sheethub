@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   scope :is_active, -> { where(finished_registration?: true) }
 
-  validates :username, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A[a-zA-Z0-9]+\Z/, message: "No spaces and no special characters allowed!"}, if: :finished_registration?
+  validates :username, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A[a-zA-Z0-9]+\Z/, message: 'No spaces and no special characters allowed!' }, if: :finished_registration?
   validates_email_format_of :email, if: proc { |u| u.email_changed? }, message: 'You have an invalid email address'
   has_many :sheets, dependent: :destroy
   has_many :notes, dependent: :destroy
@@ -71,7 +71,7 @@ class User < ActiveRecord::Base
 
       # Get normal quality picture if using omniauth-facebook
       if auth.provider == 'facebook'
-        user.image = auth.info.image + '?type=large'
+        user.image = "#{auth.info.image}?type=large"
       else
         user.image = auth.info.image
       end

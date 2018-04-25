@@ -9,7 +9,7 @@ keywords @sheet.cached_joined_tags
       <div id="sheet-content" class="col-xs-8">
         <h1 class="text-center">Editing <%= @sheet.title %></h1>
         <hr>
-        <%= image_tag(@sheet.pdf_preview_url, :class => "sample_sheet") %>
+        <%= image_tag(@sheet.pdf_preview_url, :class => 'sample_sheet') %>
       </div>
 
       <div id="sheet-sidebar" class="col-xs-4">
@@ -26,7 +26,7 @@ keywords @sheet.cached_joined_tags
           <div class="panel panel-danger">
             <div class="panel-heading"><em class="fa fa-warning"></em> Danger Zone</div>
             <div class="panel-body">
-                  <%= link_to raw("<em class='fa fa-trash'></em> Delete this Sheet"), @sheet, method: :delete, data: { confirm: 'Are you sure you want to delete this sheet? You can restore deleted sheets at any time from the Trash page.' }, class:"btn btn-danger" %>
+                  <%= link_to raw('<em class="fa fa-trash"></em> Delete this Sheet'), @sheet, method: :delete, data: { confirm: 'Are you sure you want to delete this sheet? You can restore deleted sheets at any time from the Trash page.' }, class: 'btn btn-danger' %>
             </div>
           </div>
       </div>

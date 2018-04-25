@@ -1,5 +1,5 @@
 <%
-title "Go Pro"
+title 'Go Pro'
 keywords %w(upgrade pro plus premium)
 %>
 
@@ -7,14 +7,14 @@ keywords %w(upgrade pro plus premium)
     <p class="bg-success"><em class="fa fa-bullhorn"></em> Thank you for being part of our public alpha! As thanks for your support, transaction fees are only <strong>5%</strong>! Earn up to <strong>95%</strong> for every sale!</p>
     <br />
     <h1 class="sheets-heading text-center">Go Pro on SheetHub</h1>
-    <h2 class="text-center">Get access to awesome new <%= link_to "features", features_url %> and even higher earnings!</h2>
+    <h2 class="text-center">Get access to awesome new <%= link_to 'features', features_url %> and even higher earnings!</h2>
 
     <div class="row">
         <div class="col-xs-4">
-          <%= render 'subscriptions/pro_table', nobutton:false %>
+            <%= render 'subscriptions/pro_table', nobutton: false %>
         </div>
         <div class="col-xs-4">
-            <%= render 'subscriptions/plus_table', nobutton:false %>
+            <%= render 'subscriptions/plus_table', nobutton: false %>
         </div>
         <div class="col-xs-4">
             <%= render 'subscriptions/basic_table' %>
@@ -24,10 +24,10 @@ keywords %w(upgrade pro plus premium)
     <div class="row">
         <hr>
         <div class="col-xs-6">
-        <p class="bg-info"><em class="fa fa-info-circle"></em> Questions about features and pricing? Visit our <%= link_to "Support Center.", support_url %> </p>
+        <p class="bg-info"><em class="fa fa-info-circle"></em> Questions about features and pricing? Visit our <%= link_to 'Support Center.', support_url %> </p>
         </div>
         <div class="col-xs-6">
-        <p class="bg-success"><em class="fa fa-graduation-cap"></em> Large Organization or Educational Institution? <%= link_to "Contact Us", contact_url(subject: "Organization/School Membership Plans") %> for free consultation.</p>
+        <p class="bg-success"><em class="fa fa-graduation-cap"></em> Large Organization or Educational Institution? <%= link_to 'Contact Us', contact_url(subject: 'Organization/School Membership Plans') %> for free consultation.</p>
         </div>
 
     </div>

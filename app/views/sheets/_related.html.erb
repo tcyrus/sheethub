@@ -10,10 +10,10 @@
             <a href="<%= sheet_url(sheet) %>">
             <div class="related-sheet">
                 <em class="pull-right fa fa-heart"></em>
-                <em><%= sheet.instruments.join(", ") %></em>
+                <em><%= sheet.instruments.join(', ') %></em>
                 <h4><%= sheet.title %></h4>
                 <h5>
-                <%= sheet.cached_sources.join(", ").titleize %>
+                <%= sheet.cached_sources.join(', ').titleize %>
                 </h5>
             </div>
             </a>

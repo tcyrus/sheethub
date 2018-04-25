@@ -2,7 +2,7 @@
     <% if sheet.free? || (user_signed_in? && sheet.owned_by?(current_user)) %>
         <%= render 'pdf_canvas' %>
     <% else %>
-        <%= image_tag(sheet.pdf_preview_url, class: "sample_sheet") %>
+        <%= image_tag(sheet.pdf_preview_url, class: 'sample_sheet') %>
     <% end %>
 
     <span class="price-tag">
@@ -13,5 +13,5 @@
         <% end %>
     </span>
 <% else %>
-    <%= image_tag("/assets/missing.png", class: "sample_sheet") %>
+    <%= image_tag('/assets/missing.png', class: 'sample_sheet') %>
 <% end %>

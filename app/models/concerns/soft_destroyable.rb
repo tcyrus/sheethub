@@ -23,5 +23,4 @@ module SoftDestroyable
     restore_tags
     Sheet.restore(self, recursive: true)
   end
-
 end

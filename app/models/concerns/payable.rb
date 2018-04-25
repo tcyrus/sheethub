@@ -6,7 +6,7 @@ module Payable
     PLUS_ROYALTY_PERCENTAGE = 0.95
     PRO_ROYALTY_PERCENTAGE = 0.95
 
-    validates_email_format_of :paypal_email, message: 'You have an invalid paypal account email address', if: :paypal_email?
+    validates_email_format_of :paypal_email, message: 'You have an invalid PayPal account email address', if: :paypal_email?
   end
 
   def royalty_percentage

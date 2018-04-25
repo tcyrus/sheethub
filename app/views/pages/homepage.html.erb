@@ -1,6 +1,6 @@
 <%
-title "Community Marketplace For Musicians"
-description "SheetHub is a community marketplace for musicians. Publish, share, and sell your music on SheetHub!"
+title 'Community Marketplace For Musicians'
+description 'SheetHub is a community marketplace for musicians. Publish, share, and sell your music on SheetHub!'
 %>
 
 <div class="animated-banner">
@@ -23,9 +23,9 @@ description "SheetHub is a community marketplace for musicians. Publish, share, 
 </div>
 
 <%= render 'sheets/instruments_strip', instruments: @instruments %>
-<%= render 'sheets/tag_strip', tags: @genres, tag_type:'genre' %>
-<%= render 'sheets/tag_strip', tags: @composers, tag_type:'composer' %>
-<%= render 'sheets/tag_strip', tags: @sources, tag_type:'source' %>
+<%= render 'sheets/tag_strip', tags: @genres, tag_type: 'genre' %>
+<%= render 'sheets/tag_strip', tags: @composers, tag_type: 'composer' %>
+<%= render 'sheets/tag_strip', tags: @sources, tag_type: 'source' %>
 
 <div class="container">
     <div class="col-xs-12">

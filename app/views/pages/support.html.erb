@@ -1,6 +1,6 @@
 <%
-title "Support"
-description "SheetHub Support and Frequently Asked Questions"
+title 'Support'
+description 'SheetHub Support and Frequently Asked Questions'
 keywords %w(support faq help frequently/ asked/ questions)
 %>
 
@@ -13,48 +13,48 @@ keywords %w(support faq help frequently/ asked/ questions)
 <div class="col-xs-8 white-container">
 <div class="panel-group" role="tablist" aria-multiselectable="true">
   <h4><em class="fa fa-book"></em> General</h4>
-  <%= render "faq_item", id:"sheethub-benefits", question: "What does SheetHub give me?", answer: "<p>SheetHub empowers musicians, composers, and arrangers with the ability to easily find, publish, and share sheet music, tablature, and score online. You can easily create a page where your fans can view and purchase your works. You also get an online profile at username.sheethub.co that showcases all the works you've published on SheetHub. </p><p>Your files are securely hosted on SheetHub so you don't need to worry about building a website or storing files anywhere. We help you handle everything from payments, sales, emails, and distribution. SheetHub handles all the technical complexities behind hosting and selling your sheet music online, so you can focus on pursuing your music!</p><p>
-  Get started today! Add your work, name a price, and start selling instantly. Want us to help you? Email us at <a href='mailto:support@sheethub.co'>support@sheethub.co</a></p> " %>
-  <%= render "faq_item", id:"sheethub-costs", question: "How much does SheetHub cost?", answer: "<p>With SheetHub, you have no setup fees, no monthly fees, no hosting fees, no bandwidth fees to worry about. Just <strike>15%</strike> <strong>5%</strong> per transaction! For a <strong>$5.00</strong> sale, you'll earn <strong>$4.75</strong>! The rest goes on to fund new features voted on by the SheetHub community for everyone's benefit.</p> <p class='bg-success'><em class='fa fa-star'></em> Be part of our public alpha and earn <strong>95%</strong>!</p> <p>You are paid directly to your PayPal account the moment you make a sale. SheetHub never holds any of your earnings. No one likes to wait for their money. Get paid instantly on SheetHub.
+  <%= render 'faq_item', id: 'sheethub-benefits', question: 'What does SheetHub give me?', answer: "<p>SheetHub empowers musicians, composers, and arrangers with the ability to easily find, publish, and share sheet music, tablature, and score online. You can easily create a page where your fans can view and purchase your works. You also get an online profile at username.sheethub.co that showcases all the works you've published on SheetHub. </p><p>Your files are securely hosted on SheetHub so you don't need to worry about building a website or storing files anywhere. We help you handle everything from payments, sales, emails, and distribution. SheetHub handles all the technical complexities behind hosting and selling your sheet music online, so you can focus on pursuing your music!</p><p>
+  Get started today! Add your work, name a price, and start selling instantly. Want us to help you? Email us at <a href='mailto:support@sheethub.co'>support@sheethub.co</a></p>" %>
+  <%= render 'faq_item', id: 'sheethub-costs', question: "How much does SheetHub cost?", answer: "<p>With SheetHub, you have no setup fees, no monthly fees, no hosting fees, no bandwidth fees to worry about. Just <strike>15%</strike> <strong>5%</strong> per transaction! For a <strong>$5.00</strong> sale, you'll earn <strong>$4.75</strong>! The rest goes on to fund new features voted on by the SheetHub community for everyone's benefit.</p> <p class='bg-success'><em class='fa fa-star'></em> Be part of our public alpha and earn <strong>95%</strong>!</p> <p>You are paid directly to your PayPal account the moment you make a sale. SheetHub never holds any of your earnings. No one likes to wait for their money. Get paid instantly on SheetHub.
     </p> <p>#{link_to 'Sign Up', new_user_registration_url} and get <strong>unlimited uploads</strong> today!</p>" %>
-  <%= render "faq_item", id:"howto-upload", question: "How do I upload my music on SheetHub?", answer: "<a href='#{new_user_registration_url }'>Sign Up</a> and <a href='#{sheet_upload_url}'>Upload</a>. You will need at least a printable PDF version of your sheet music to start." %>
+  <%= render 'faq_item', id: 'howto-upload', question: "How do I upload my music on SheetHub?", answer: "<a href='#{new_user_registration_url }'>Sign Up</a> and <a href='#{sheet_upload_url}'>Upload</a>. You will need at least a printable PDF version of your sheet music to start." %>
   <hr>
 
   <h4><em class="fa fa-music"></em> User Submissions</h4>
-    <%= render "faq_item", id:"sheet-requirements", question: "What technical requirements do you have for submitted PDFs?", answer: "PDFs submitted must be: <ul><li>portrait oriented</li> <li>free of password protection</li> <li>less than 20 MB in size</li></ul><p>We require PDFs because it is a file format that is easily printable and require no specific music notation software installed to view. Users will be able to view and print your works without hassle.</p>"%>
-     <%= render "faq_item", id:"sheet-recommendations", question: "Any other recommendations on how to format my PDF?", answer: "Users will be able to view a cover page which will be automatically created from the first page of your PDF. Customers are better able to make a purchasing decision if they can see a sample of your music that reflects the difficulty, range and uniqueness of your piece."%>
-     <%= render "faq_item", id:"sheet-metadata", question: "What other information can I submit with my sheet music?", answer: "Submitting additional information about your sheet music - instruments, composers, genres, and sources - will help other users find and ultimately purchase your sheet music. SheetHub also uses this information in our internal recommendations system. The more detailed information you provide, the more likely that your sheet music appears in recommended results. "%>
-     <%= render "faq_item", id:"sheet-additional-files", question: "Can I add additional files together with my PDF?", answer: "<strong>Yes!</strong> You can add up to 5 supporting files such as audio files and music notation software specific files through your sheet's edit page. Each file must be less than 20MB in size. "%>
-      <%= render "faq_item", id:"upload-limit", question: "How many sheets can I upload?", answer: "You get <strong>unlimited uploads</strong> for commercial (non-free) works. There is a soft limit of free sheets. The limit is in place to prevent abuse. If you wish to have more, #{link_to 'Upgrade', upgrade_url} whenever you are ready." %>
-      <%= render "faq_item", id:"howto-embed-links", question: "How can I link to my Youtube/Vimeo/Soundcloud?", answer: "<p>In your sheet description, you can add links to your hosted videos and SheetHub will automagically generate the video player for you. See an example below. Youtube, Vimeo, and Soundcloud embeds are supported. For example: </p> <img src='http://i.imgur.com/NoYhHmC.png' alt='Sheet Description Box' /><p>The above description becomes:</p><img src='http://i.imgur.com/ijjnhv6.png' alt='Automagically generated media players' />" %>
+  <%= render "faq_item", id: 'sheet-requirements', question: "What technical requirements do you have for submitted PDFs?", answer: "PDFs submitted must be: <ul><li>portrait oriented</li> <li>free of password protection</li> <li>less than 20 MB in size</li></ul><p>We require PDFs because it is a file format that is easily printable and require no specific music notation software installed to view. Users will be able to view and print your works without hassle.</p>" %>
+  <%= render 'faq_item', id: 'sheet-recommendations', question: "Any other recommendations on how to format my PDF?", answer: "Users will be able to view a cover page which will be automatically created from the first page of your PDF. Customers are better able to make a purchasing decision if they can see a sample of your music that reflects the difficulty, range and uniqueness of your piece." %>
+  <%= render 'faq_item', id: 'sheet-metadata', question: "What other information can I submit with my sheet music?", answer: "Submitting additional information about your sheet music - instruments, composers, genres, and sources - will help other users find and ultimately purchase your sheet music. SheetHub also uses this information in our internal recommendations system. The more detailed information you provide, the more likely that your sheet music appears in recommended results." %>
+  <%= render 'faq_item', id: 'sheet-additional-files', question: "Can I add additional files together with my PDF?", answer: "<strong>Yes!</strong> You can add up to 5 supporting files such as audio files and music notation software specific files through your sheet's edit page. Each file must be less than 20MB in size." %>
+  <%= render 'faq_item', id: 'upload-limit', question: 'How many sheets can I upload?', answer: "You get <strong>unlimited uploads</strong> for commercial (non-free) works. There is a soft limit of free sheets. The limit is in place to prevent abuse. If you wish to have more, #{link_to 'Upgrade', upgrade_url} whenever you are ready." %>
+  <%= render 'faq_item', id: 'howto-embed-links', question: 'How can I link to my YouTube/Vimeo/SoundCloud?', answer: "<p>In your sheet description, you can add links to your hosted videos and SheetHub will automagically generate the video player for you. See an example below. YouTube, Vimeo, and SoundCloud embeds are supported. For example: </p> <img src='http://i.imgur.com/NoYhHmC.png' alt='Sheet Description Box' /><p>The above description becomes:</p><img src='http://i.imgur.com/ijjnhv6.png' alt='Automagically generated media players' />" %>
 
   <hr>
   <h4><em class="fa fa-shopping-cart"></em> Purchases</h4>
-    <%= render "faq_item", id:"my-purchases", question: "Where can I find my purchases?", answer: "You can view all your purchases via the #{ link_to 'My Library',user_library_url } page. "%>
-    <%= render "faq_item", id:"out-of-stock", question: "What does out of stock mean?", answer: "Licenses for arranged sheet music are often purchased in limited sets. For one song, the arranger is only allowed to sell X number of copies; then she has to re-purchase additional licenses to continue selling."%>
+  <%= render 'faq_item', id: 'my-purchases', question: 'Where can I find my purchases?', answer: "You can view all your purchases via the #{ link_to 'My Library',user_library_url } page." %>
+  <%= render 'faq_item', id: 'out-of-stock', question: 'What does out of stock mean?', answer: "Licenses for arranged sheet music are often purchased in limited sets. For one song, the arranger is only allowed to sell X number of copies; then she has to re-purchase additional licenses to continue selling." %>
   <hr>
 
   <h4><em class="fa fa-line-chart"></em> Payments, Sales, and Earnings</h4>
-  <%= render "faq_item", id:"payment-flow", question: "How does SheetHub handle payments?", answer: "<p>SheetHub uses PayPal to process payments. PayPal is available in multiple countries and currencies, and accepts multiple modes of payment. Let's briefly walk through a buying user's purchasing flow. From your sheet's page, users will see a Buy Now button:</p>
+  <%= render 'faq_item', id: 'payment-flow', question: 'How does SheetHub handle payments?', answer: "<p>SheetHub uses PayPal to process payments. PayPal is available in multiple countries and currencies, and accepts multiple modes of payment. Let's briefly walk through a buying user's purchasing flow. From your sheet's page, users will see a Buy Now button:</p>
     <img src='http://i.imgur.com/BazYJiN.png' alt='Buy Now button' />
     <p>Which will open a modal overlay:</p>
     <img src='http://i.imgur.com/RUCReKW.png' alt='Buy Now modal overlay' />
-    <p>Clicking checkout will bring them to Paypal to authorize the purchase:</p>
-    <img src='http://i.imgur.com/giJKV9C.png' style='width: 600px;' alt='Paypal authorization'/>
-    <p>Once the user has completed the authorization process, you will receive your earnings directly to your Paypal account. The user will, upon a successful purchase, be able to download the files you've uploaded for your sheet through SheetHub. Users cannot share their download links, as they are private URLs. PDF Downloads may also be individually stamped with the user's name and email to discourage unauthorized sharing. </p>
-  "%>
-  <%= render "faq_item", id:"payment-security", question: "Do you store my credit card information?", answer: "<strong>No credit card information is stored on our server!</strong> We use PayPal, one of the most secure and reputable payment processors available. PayPal automatically encrypts your confidential information in transit using the Secure Sockets Layer protocol (SSL) with an encryption key length of 128-bits (the highest level commercially available.) Once your information reaches the PayPal site, it resides on a server that is heavily guarded both physically and electronically. PayPal servers sit behind an electronic firewall and are not directly connected to the internet, so your private information is available only to authorized computers. Visit <a href='https://www.paypal.com/sg/webapps/mpp/paypal-safety-and-security'>Paypal Security Center</a> for more details. "%>
-  <%= render "faq_item", id:"earnings-calculation", question: "Someone buys my music for $5, how much do I get?", answer: "First, SheetHub will take 20% ($1) to pay for hosting fees, server fees, and to fund new features. Your 80%, $4.00 are paid directly to your PayPal account the moment a user completes a purchase. Note that you earn 85% as a Pro member! There are no setup fees, no monthly fees, no hosting fees to worry about."%>
-  <%= render "faq_item", id:"paypal-fee", question: "Why is there an additional fee from PayPal?", answer: "PayPal is the payment platform used by SheetHub. It handles all credit card processing and takes the place of a credit card merchant. All merchants charge a fee to process a credit card transaction, Paypal included. PayPal will take $0.30 + 2.9% of the transaction amount."%>
-  <%= render "faq_item", id:"sale-notification", question: "How do I know when I've made a sale?", answer: "<p>SheetHub will send a friendly email whenever you make a sale. It will be sent to the email address you registered with. If someone attempts to buy your music but the transaction cannot be completed (e.g. due to invalid PayPal account information) then you will also be notified.</p><p>You can view detailed sales statistics - both recent and all-time sales - detailing who has bought your works, approximated earnings,  useful charts and other statistics from the #{ link_to 'Sales',user_sales_url } page. </p> "%>
-  <%= render "faq_item", id:"when-payout", question: "When do I get paid?", answer: "You are paid directly to your PayPal account the moment a user completes a purchase. SheetHub does not hold your money. You will never have to wait."%>
-  <%= render "faq_item", id:"paypal-transfer", question: "What do you need my PayPal Email for?", answer: "SheetHub does not hold any of your earnings, so we need your verified Paypal account email address for your fans to directly pay you. "%>
-  <%= render "faq_item", id:"payment-information", question: "How do I update my payment information?", answer: "You can view and update your payment information by going to your profile <strong>Settings</strong> from the user dropdown."%>
+    <p>Clicking checkout will bring them to PayPal to authorize the purchase:</p>
+    <img src='http://i.imgur.com/giJKV9C.png' style='width: 600px;' alt='PayPal authorization'/>
+    <p>Once the user has completed the authorization process, you will receive your earnings directly to your PayPal account. The user will, upon a successful purchase, be able to download the files you've uploaded for your sheet through SheetHub. Users cannot share their download links, as they are private URLs. PDF Downloads may also be individually stamped with the user's name and email to discourage unauthorized sharing.</p>
+  " %>
+  <%= render 'faq_item', id: 'payment-security', question: 'Do you store my credit card information?', answer: "<strong>No credit card information is stored on our server!</strong> We use PayPal, one of the most secure and reputable payment processors available. PayPal automatically encrypts your confidential information in transit using the Secure Sockets Layer protocol (SSL) with an encryption key length of 128-bits (the highest level commercially available.) Once your information reaches the PayPal site, it resides on a server that is heavily guarded both physically and electronically. PayPal servers sit behind an electronic firewall and are not directly connected to the internet, so your private information is available only to authorized computers. Visit <a href='https://www.paypal.com/sg/webapps/mpp/paypal-safety-and-security'>PayPal Security Center</a> for more details." %>
+  <%= render 'faq_item', id: 'earnings-calculation', question: "Someone buys my music for $5, how much do I get?", answer: "First, SheetHub will take 20% ($1) to pay for hosting fees, server fees, and to fund new features. Your 80%, $4.00 are paid directly to your PayPal account the moment a user completes a purchase. Note that you earn 85% as a Pro member! There are no setup fees, no monthly fees, no hosting fees to worry about." %>
+  <%= render 'faq_item', id: 'paypal-fee', question: "Why is there an additional fee from PayPal?", answer: "PayPal is the payment platform used by SheetHub. It handles all credit card processing and takes the place of a credit card merchant. All merchants charge a fee to process a credit card transaction, PayPal included. PayPal will take $0.30 + 2.9% of the transaction amount." %>
+  <%= render "faq_item", id: 'sale-notification', question: "How do I know when I've made a sale?", answer: "<p>SheetHub will send a friendly email whenever you make a sale. It will be sent to the email address you registered with. If someone attempts to buy your music but the transaction cannot be completed (e.g. due to invalid PayPal account information) then you will also be notified.</p><p>You can view detailed sales statistics - both recent and all-time sales - detailing who has bought your works, approximated earnings,  useful charts and other statistics from the #{ link_to 'Sales',user_sales_url } page.</p>" %>
+  <%= render "faq_item", id:"when-payout", question: "When do I get paid?", answer: "You are paid directly to your PayPal account the moment a user completes a purchase. SheetHub does not hold your money. You will never have to wait." %>
+  <%= render "faq_item", id:"paypal-transfer", question: "What do you need my PayPal Email for?", answer: "SheetHub does not hold any of your earnings, so we need your verified PayPal account email address for your fans to directly pay you." %>
+  <%= render "faq_item", id:"payment-information", question: "How do I update my payment information?", answer: "You can view and update your payment information by going to your profile <strong>Settings</strong> from the user dropdown." %>
 
   <hr>
 
   <h4><em class="fa fa-legal"></em> Publishing Rights and Copyright</h4>
-    <%= render "faq_item", id:"licenses", question: "Which licenses can I choose?", answer:"<ul>
+    <%= render 'faq_item', id: 'licenses', question: "Which licenses can I choose?", answer:"<ul>
 <li><strong>All rights reserved.</strong> As the copyright holder, you reserve, or hold for your own use, all the rights provided by copyright law on your work, such as distribution, performance, and creation of derivative works.</li>
 <li><strong>Licensed Arrangement.</strong> A licensed arrangement is one in which the composer gives the arranger permission to make, sell and distribute a written arrangement of the composition.</li>
 <li><strong><a href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>Creative Commons BY-NC-SA</a>. </strong>
@@ -71,16 +71,15 @@ You allow others to distribute derivative works only under a license identical t
 <li><strong><a href='http://creativecommons.org/publicdomain/zero/1.0/'>Creative Commons Zero</a>.</strong> You waive the interest in your works and thereby place it as completely as possible in the public domain, so that others may freely build upon, enhance and reuse the works for any purposes without restriction under copyright.</li>
 <li><strong>Public Domain Mark. </strong>
 The Public Domain Mark is recommended for works that are free of known copyright around the world. These will typically be very old works. It is not recommended for use with works that are in the public domain in some jurisdictions if they also known to be restricted by copyright in others.</li>
-</ul>
-    " %>
+</ul>" %>
 
   <%= render "faq_item", id:"publishing-rights", question: "Do I need to have publishing rights to the sheet music?", answer: "<p><strong>Yes</strong>, we take publishing rights and copyright laws very seriously. You accept that, as part of your sheet music submission, you possess either one of the following type of rights:</p>
 <ul>
 <li>Original composition - the sheet music is entirely your own</li>
 <li>Publishing and distribution rights - you have worked with a publisher or copyright holder and received approval to sell the sheet music on a worldwide basis</li>
 <li>Unique version of a public domain sheet music - you have arranged a public domain work in a unique way that differentiates it from products currently available for sale on SheetHub.</li>
-</ul>"%>
-  <%= render "faq_item", id:"arrangements", question: "Can I submit an arrangement of public domain sheet music?", answer: "Yes, you may submit an arrangement of public domain sheet music as long as you have added additional value that is not currently represented on SheetHub. This includes an unusual instrumentation, a level-specific arrangement or an arrangement in a style that is different than the original."%>
+</ul>" %>
+  <%= render "faq_item", id:"arrangements", question: "Can I submit an arrangement of public domain sheet music?", answer: "Yes, you may submit an arrangement of public domain sheet music as long as you have added additional value that is not currently represented on SheetHub. This includes an unusual instrumentation, a level-specific arrangement or an arrangement in a style that is different than the original." %>
   <%= render "faq_item", id:"content-rights", question: "Does SheetHub take any ownership of the content I upload?", answer: "No. You will always fully own your content. You are free to remove it at any time. SheetHub just asks for the minimum amount of rights necessary to run the site, such as permission to show your sheet page, host your files, and distribute your work on your behalf." %>
   <%= render "faq_item", id:"copyright-report", question: "How do I report a copyright infringement?", answer:"<p>If you are a copyright owner or an agent of a copyright owner and believe that any User Material or other content that has been made available on or through the Website infringes upon your copyrights, provide the following information on the <strong>Report</strong> page:</p>
 
@@ -93,31 +92,30 @@ The Public Domain Mark is recommended for works that are free of known copyright
         <li>a statement by you that the information in the Notice is accurate, and under penalty of perjury, that you are authorized to act on behalf of the owner of the exclusive right that is allegedly infringed; and</li>
         <li>an electronic or physical signature (which may be a scanned copy) of a person authorized to act on behalf of owner of the work that is allegedly infringed.</li>
         </ul>" %>
-
   <hr>
+
   <h4><em class="fa fa-certificate"></em> PDF Stamping</h4>
-    <%= render "faq_item", id:"help-pdf-stamping", question: "What is PDF Stamping?", answer: "<p>Enabling PDF Stamping will stamp the buyer's name and email address on their PDF download. It serves as a disincentive for customers who might abuse their ownership of your work. PDF Stamps only applies to commercial sheets.</p> <img src='http://i.imgur.com/vHm8dMh.png' style='width: 100%' alt='PDF Stamping sample'/>"%>
-
+  <%= render "faq_item", id:"help-pdf-stamping", question: "What is PDF Stamping?", answer: "<p>Enabling PDF Stamping will stamp the buyer's name and email address on their PDF download. It serves as a disincentive for customers who might abuse their ownership of your work. PDF Stamps only applies to commercial sheets.</p> <img src='http://i.imgur.com/vHm8dMh.png' style='width: 100%' alt='PDF Stamping sample'/>" %>
   <hr>
+
   <h4><em class="fa fa-plus"></em> Pay-What-You-Want pricing</h4>
-    <%= render "faq_item", id:"help-pay-what-you-want", question: "What is pay-what-you-want pricing?", answer: "<p>Pay what you want pricing lets your biggest fans pay above and beyond your listed price. This feature is available to #{link_to 'Plus', upgrade_url} and #{link_to 'Pro', upgrade_url} users. Enabling pay what you want will give your work the following Buy Now modal:</p><img src='http://i.imgur.com/uGBtLi0.png' style='width: 100%' alt='Pay what you want pricing sample'/>" %>
-
-    <hr>
-    <h4><em class="fa fa-user"></em> Pro and Plus memberships</h4>
-      <%= render "faq_item", id:"help-membership-payment-terms", question: "What are the Pro and Plus membership payment terms?", answer: "<p>Pro and Plus membership is a month-to-month service. There is no contract or long term obligation. You are billed on a monthly basis, and if you cancel you will not be billed again.</p>" %>
-      <%= render "faq_item", id:"help-membership-downgrade", question: "What happens when I downgrade/cancel?", answer: "<p>You may lose access to some features. In addition, if your current usage quota exceeds the basic membership quota, you will need to delete some free sheets before you can downgrade.</p>" %>
-
-
+  <%= render "faq_item", id:"help-pay-what-you-want", question: "What is pay-what-you-want pricing?", answer: "<p>Pay what you want pricing lets your biggest fans pay above and beyond your listed price. This feature is available to #{link_to 'Plus', upgrade_url} and #{link_to 'Pro', upgrade_url} users. Enabling pay what you want will give your work the following Buy Now modal:</p><img src='http://i.imgur.com/uGBtLi0.png' style='width: 100%' alt='Pay what you want pricing sample'/>" %>
   <hr>
+
+  <h4><em class="fa fa-user"></em> Pro and Plus memberships</h4>
+  <%= render "faq_item", id:"help-membership-payment-terms", question: "What are the Pro and Plus membership payment terms?", answer: "<p>Pro and Plus membership is a month-to-month service. There is no contract or long term obligation. You are billed on a monthly basis, and if you cancel you will not be billed again.</p>" %>
+  <%= render "faq_item", id:"help-membership-downgrade", question: "What happens when I downgrade/cancel?", answer: "<p>You may lose access to some features. In addition, if your current usage quota exceeds the basic membership quota, you will need to delete some free sheets before you can downgrade.</p>" %>
+  <hr>
+
   <h4><em class="fa fa-info-circle"></em> Miscellaneous</h4>
     <%= render "faq_item", id:"howto-help", question: "How can I help build this community?", answer: "We want SheetHub to become a vibrant community and for you to feel like a part of it all. Any contributions you make would be awesome. You can help by giving feedback & suggestions, following the #{link_to 'Community Guidelines', community_guidelines_url }, helping us spread the word, and sharing your performances! You shape the future of SheetHub!" %>
     <%= render "faq_item", id:"feature-request", question: "I have a feature I'd like to see. How do I let you know?", answer: "Be sure to leave your ideas, comments, and suggestions on our <strong>Feedback</strong> page. You shape the future of SheetHub!" %>
     <%= render "faq_item", id:"bug-report", question: "I want to report a bug!", answer: "Report it on our <strong>Feedback</strong> page. Help us squash all the bugs!" %>
     <%= render "faq_item", id:"missing-question", question: "My question isn't on here!", answer: "#{link_to 'Let us know!', contact_url(subject: 'I have a question')}" %>
+  <hr>
 
-<hr>
-<h4><em class="fa fa-child"></em> About</h4>
-  <%= render "faq_item", id:"who-makes-sheethub", question: "Who makes SheetHub?", answer: "#{link_to "This person.", "http://yosriady.com"} I’m a software engineer. I started playing classical guitar at a young age and regularly play in my spare time. I've been looking for a decent community/marketplace for sheet music and have been disappointed so far, so I decided to try my hand at building one. <a href='mailto:yosriady@gmail.com'>Let me know what you think!</a> Your feedback will help guide SheetHub's ongoing development.</p> <p>Also, be sure to visit the <a href='http://blog.sheethub.co'>SheetHub Blog</a> for new features and updates!</p>" %>
+  <h4><em class="fa fa-child"></em> About</h4>
+  <%= render 'faq_item', id: 'who-makes-sheethub', question: 'Who makes SheetHub?', answer: "#{link_to 'This person.', 'https://yos.io/'} I’m a software engineer. I started playing classical guitar at a young age and regularly play in my spare time. I've been looking for a decent community/marketplace for sheet music and have been disappointed so far, so I decided to try my hand at building one. <a href='mailto:yosriady@gmail.com'>Let me know what you think!</a> Your feedback will help guide SheetHub's ongoing development.</p> <p>Also, be sure to visit the <a href='http://blog.sheethub.co'>SheetHub Blog</a> for new features and updates!</p>" %>
 
 </div>
 
@@ -138,8 +136,8 @@ The Public Domain Mark is recommended for works that are free of known copyright
 </div>
 
 <script>
-  $(document).on("page:change", function() {
+  $(document).on('page:change', function() {
     var faq_id = location.hash;
-    $(location.hash).collapse("toggle");
+    $(location.hash).collapse('toggle');
   });
 </script>

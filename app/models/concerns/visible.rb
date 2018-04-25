@@ -19,5 +19,4 @@ module Visible
   def visibility_string
     visibility[1..-1].titleize
   end
-
 end

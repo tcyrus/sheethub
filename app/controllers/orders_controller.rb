@@ -2,7 +2,7 @@
 class OrdersController < ApplicationController
   SUCCESS_ORDER_PURCHASE_MESSAGE = 'Great success! Thank you for your purchase.'
   CANCEL_ORDER_PURCHASE_MESSAGE = 'Purchase canceled.'
-  PURCHASE_INVALID_PAYPAL_EMAIL_MESSAGE = "We could not process your purchase. The uploader's Paypal email is invalid! We've sent the uploader an email. In the meantime, why not take a look at other works on SheetHub?"
+  PURCHASE_INVALID_PAYPAL_EMAIL_MESSAGE = "We could not process your purchase. The uploader's PayPal email is invalid! We've sent the uploader an email. In the meantime, why not take a look at other works on SheetHub?"
   FLAGGED_MESSAGE = 'You cannot purchase a flagged sheet.'
   INVALID_PRICE_MESSAGE = 'Amount must be at least the minimum price.'
 
@@ -52,7 +52,7 @@ class OrdersController < ApplicationController
       redirect_url = build_redirect_url(payment_response.payKey)
       redirect_to redirect_url
     else
-      Rails.logger.info "Paypal Order Error #{payment_response.error.first.errorId}: #{payment_response.error.first.message}"
+      Rails.logger.info "PayPal Order Error #{payment_response.error.first.errorId}: #{payment_response.error.first.message}"
       if invalid_account_details?(payment_response)
         OrderMailer.purchase_failure_email(@order).deliver
         flash[:error] = PURCHASE_INVALID_PAYPAL_EMAIL_MESSAGE
@@ -164,13 +164,13 @@ class OrdersController < ApplicationController
 
     def validate_order_exists
       return if @order.present?
-      flash[:error] = "That order does not exist."
+      flash[:error] = 'That order does not exist.'
       redirect_to root_url
     end
 
     def authenticate_owner
       return if @order.user == current_user
-      flash[:error] = "You are not the owner of that order."
+      flash[:error] = 'You are not the owner of that order.'
       redirect_to root_url
     end
 

@@ -1,14 +1,14 @@
 <%
-title "All Sources"
-description "All sources (movies, games, anime, and TV shows) on SheetHub"
+title 'All Sources'
+description 'All sources (movies, games, anime, and TV shows) on SheetHub'
 %>
 
 <div class="container">
     <div class="row">
     <div class="col-xs-12">
-        <%= render 'tag_type_breadcrumb', tag_type:"source" %>
+        <%= render 'tag_type_breadcrumb', tag_type: 'source' %>
         <div class="flat-tags">
-        <%= render 'lean_tags', tags: @sources, tag_type:"source" %>
+        <%= render 'lean_tags', tags: @sources, tag_type: 'source' %>
         </div>
     </div>
     </div>
